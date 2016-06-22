@@ -24,7 +24,16 @@
     <Compile Include="constants.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="dataHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="en_us.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="fileManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistentTally.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

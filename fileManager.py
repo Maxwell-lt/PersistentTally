@@ -10,7 +10,7 @@ import os
 import constants
 
 
-#Initialize variables
+#Initialize Variables
 
 
 def GetDataFromFile(filename):
@@ -109,8 +109,6 @@ Checks whether a manifest file exists.
 def getFileManifest(overrideFile = None):
 	"""
 Returns a list of files as a Python dictionary from a JSON encoded manifest file.
-
-If file is unreadable or blank, it will return False.
 	"""
 	if overrideFile:
 		manifestLoc = overrideFile
@@ -118,7 +116,8 @@ If file is unreadable or blank, it will return False.
 		manifestLoc = constants.DEFAULTMANIFEST
 
 	if not isManifest(manifestLoc):
-		return False
+		createManifest(manifestLoc)
+		return dict()
 
 	data = json.load(fileObj)
 	fileObj.close()
